@@ -34,10 +34,12 @@
 #ifdef kWindowCanFloat
     NSPoint origin;
     
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:kUserDefaultsFrameOriginX];
+
     // remember positions
-    if ([[NSUserDefaults standardUserDefaults] valueForKey:kUserDefaultsFrameOriginX]) {
-        float x = [[[NSUserDefaults standardUserDefaults] valueForKey:kUserDefaultsFrameOriginX] floatValue];
-        float y = [[[NSUserDefaults standardUserDefaults] valueForKey:kUserDefaultsFrameOriginY] floatValue];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kUserDefaultsFrameOriginX]) {
+        float x = [[[NSUserDefaults standardUserDefaults] objectForKey:kUserDefaultsFrameOriginX] floatValue];
+        float y = [[[NSUserDefaults standardUserDefaults] objectForKey:kUserDefaultsFrameOriginY] floatValue];
         
         origin = NSMakePoint(x, y);
     } else
@@ -84,9 +86,15 @@
 	[super setAlphaValue:windowAlpha];
 	
     if (0.0f == windowAlpha)
-		[self orderOut:self];
+    {
+        [self orderOut:self];
+    }
     else
+    {
         [self makeKeyAndOrderFront:self];
+        [NSApp activateIgnoringOtherApps:YES];
+
+    }
 }
 
 - (void)windowDidResignKey:(NSNotification *)notification 
