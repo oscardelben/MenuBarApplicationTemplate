@@ -33,8 +33,6 @@
 - (void)setAttachPoint:(NSPoint)point {
 #ifdef kWindowCanFloat
     NSPoint origin;
-    
-    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:kUserDefaultsFrameOriginX];
 
     // remember positions
     if ([[NSUserDefaults standardUserDefaults] objectForKey:kUserDefaultsFrameOriginX]) {
@@ -124,9 +122,10 @@
 - (void)windowDidMove:(NSNotification *)notification {
     float x = [[notification object] frame].origin.x;
     float y = [[notification object] frame].origin.y;
-    
+
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:x] forKey:kUserDefaultsFrameOriginX];
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:y] forKey:kUserDefaultsFrameOriginY];
+    
 }
 #endif
 
