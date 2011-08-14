@@ -12,6 +12,6 @@
     NSWindow *_window;
 }
 
-@property (strong) IBOutlet NSWindow *window;
+@property (retain) IBOutlet NSWindow *window;
 
 @end
