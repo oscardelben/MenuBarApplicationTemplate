@@ -7,3 +7,7 @@ To use it, you need to:
 - add a boolean YES in the info.plist with key "Application is agent" to hide the dock icon.
 - Open the existing MainMenu.xib (or whatever you're using in your project), add an instance to ApplicationController, delete the existing window, then add your view and connect the view outlets.
 - Build and run.
+
+Example:
+
+![preview](http://cocoadevblog.s3.amazonaws.com/023/menubar.png)
