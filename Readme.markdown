@@ -1,6 +1,6 @@
 This is a template for menu bar applications with custom windows and custom menu bar icon. It was partially taken from an existing application developed by another developer. I've added support for moving the window and animations support.
 
-It allows the creation of a menu bar app with custom icon and a custom window attached (see [this app](http://itunes.apple.com/us/app/facetab/id421358730?mt=12) for an example).
+It allows the creation of a menu bar app with custom icon and a custom window attached (see [this app](https://github.com/oscardelben/Color-Picker-Pro) for an example).
 
 To use it, you need to:
 
