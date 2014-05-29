@@ -1,4 +1,5 @@
 #import "CustomStatusItem.h"
+#import "ContentProvider.h"
 
 @implementation CustomStatusItem
 
@@ -11,7 +12,7 @@
     NSRect destRect = NSZeroRect;
     destRect.size = dirtyRect.size;
     
-    NSString *aString = @"Hello";
+    NSString *aString = [ContentProvider content];
     
     // We can calculate the width of the menu bar icon here
     float width = [aString sizeWithAttributes:nil].width;

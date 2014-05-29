@@ -9,5 +9,7 @@
 #import "ContentProvider.h"
 
 @implementation ContentProvider
-
++ (NSString *)content {
+    return @"Hello";
+}
 @end

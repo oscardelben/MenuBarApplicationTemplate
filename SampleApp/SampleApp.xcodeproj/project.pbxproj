@@ -107,9 +107,9 @@
 				55CF44AC13E950190023C02D /* CustomWindow.h */,
 				55CF44AD13E950190023C02D /* CustomWindow.m */,
 				55CF449F13E9500D0023C02D /* MainMenu.xib */,
-				55CF449113E9500C0023C02D /* Supporting Files */,
 				DB9755921937A5C500B55747 /* ContentProvider.h */,
 				DB9755931937A5C500B55747 /* ContentProvider.m */,
+				55CF449113E9500C0023C02D /* Supporting Files */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";

@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface ContentProvider : NSObject
-
++ (NSString *)content;
 @end
