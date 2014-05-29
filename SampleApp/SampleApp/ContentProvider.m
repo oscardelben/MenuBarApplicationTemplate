@@ -10,6 +10,10 @@
 
 @implementation ContentProvider
 + (NSString *)content {
-    return @"Hello";
+    NSDate *date = [NSDate date];
+    NSString *dateString = [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterFullStyle];
+    NSString *content = dateString;
+    NSLog(@"content = \"%@\"", content);
+    return content;
 }
 @end
